@@ -471,7 +471,13 @@ client.on('group-participants-update', async (anu) => {
 					buff = await getBuffer(anu.result)
 					client.sendMessage(from, buff, image, {quoted: mek, caption: mess.success})
 					break
-				case 'url2img': 
+				case 'quotes':
+                                        client.updatePresence(from, Presence.composing)
+                                        anu = await fetchJson(`https://tobz-api.herokuapp.com/api/randomquotes`)
+			                hasil = `${anu.quotes}\n*${anu.author}*`
+                                        reply(hasil)
+                                        break
+                               case 'url2img': 
 					tipelist = ['desktop','tablet','mobile']
 					if (args.length < 1) return reply('𝗧𝗶𝗽𝗲𝗻𝘆𝗮 𝗮𝗽𝗮 𝘁𝗼𝗱??')
 					if (!tipelist.includes(args[0])) return reply('𝗧𝗶𝗽𝗲 𝗱𝗲𝘀𝗸𝘁𝗼𝗽|𝘁𝗮𝗯𝗹𝗲𝘁|𝗺𝗼𝗯𝗶𝗹𝗲')
