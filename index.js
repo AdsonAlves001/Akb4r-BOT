@@ -38,7 +38,7 @@ const vcard = 'BEGIN:VCARD\n' // ANAK ANJING MAU NGAPAIN?
             + 'FN:Akbar🗿\n' // MENDING LU TOBAT SU!
             + 'ORG:Creator BARXNL-BOT;\n' // KASIH CREDITS GUA SU!!!
             + 'TEL;type=CELL;type=VOICE;waid=6282198571732:+62 821-9857-1732\n' // JANGAN KEK BABI SU
-            + 'END:VCARD' // ARIS187 ID
+            + 'END:VCARD' // BARXNL-BOT
 prefix = '!'
 blocked = []            
 const time = moment().tz('Asia/Jakarta').format("HH:mm:ss")
@@ -47,11 +47,11 @@ const arrayBulan = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Jul
 const bulan = arrayBulan[moment().format('MM') - 1]
 
 const config = {
-    A187: 'AR15187 ID', // TOBAT SU ASU
-    instagram: 'https://instagram.com/_sadboy.ig', // INFO JANGAN DI UBAH
-    nomer: 'wa.me/6285722553839', // INFO SU JNGAN DI UBAH
-    youtube: 'https://youtube.com/channel/UCGYLWtyT9IADYNUiK0uZiGg', // KINTIL
-    whatsapp: 'https://chat.whatsapp.com/DSSHmG2KjKJLoFp9B9mkVs', // BABI
+    Akb4R: 'BARXNL-BOT', // TOBAT SU ASU
+    instagram: 'https://instagram.com/barxnl', // INFO JANGAN DI UBAH
+    nomer: 'wa.me/6282198571732', // INFO SU JNGAN DI UBAH
+    youtube: 'https://youtube.com/channel/UCGYLWtyT9I', // KINTIL
+    whatsapp: 'https://chat.whatsapp.com/DSSHmG2KjKJLoFB9mkVs', // BABI
     tanggal: `TANGGAL: ${moment().format('DD')} ${bulan} ${moment().format('YYYY')}`,
     waktu: time
 }
