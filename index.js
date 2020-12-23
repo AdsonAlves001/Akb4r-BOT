@@ -117,7 +117,7 @@ client.on('group-participants-update', async (anu) => {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `𝗬𝗲𝗲𝘆𝗲 𝗯𝗲𝗯𝗮𝗻 𝗴𝗿𝗼𝘂𝗽 𝗯𝗲𝗿𝗸𝘂𝗿𝗮𝗻𝗴 𝟭,𝘀𝗮𝘆𝗼𝗻𝗮𝗿𝗮🥳 @${num.split('@')[0]} 𝗴𝗮 𝘂𝘀𝗮𝗵 𝗯𝗮𝗹𝗶𝗸 𝗸𝗲𝘀𝗶𝗻𝗶 𝗹𝗮𝗴𝗶 𝘆𝗮𝗵 𝘁𝗼𝗱`
+				teks = `𝗬𝗲𝗲𝘆𝗲 𝗯𝗲𝗯𝗮𝗻 𝗴𝗿𝗼𝘂𝗽 𝗯𝗲𝗿𝗸𝘂𝗿𝗮𝗻𝗴 𝟭, 𝘀𝗮𝘆𝗼𝗻𝗮𝗿𝗮🥳 @${num.split('@')[0]} 𝗴𝗮 𝘂𝘀𝗮𝗵 𝗯𝗮𝗹𝗶𝗸 𝗸𝗲𝘀𝗶𝗻𝗶 𝗹𝗮𝗴𝗶 𝘆𝗮𝗵 𝘁𝗼𝗱!.`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 			}
