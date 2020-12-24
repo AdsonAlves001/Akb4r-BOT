@@ -457,7 +457,17 @@ client.sendMessage(from, drre, text, {quoted: mek})
 					}
 					client.sendMessage(from, tag, text, {quoted: mek})
 					break
-				case 'hilih': 
+			        case 'bucin':
+					gatauda = body.slice(7)
+					anu = await fetchJson(`https://arugaz.herokuapp.com/api/howbucins`, {method: 'get'})
+					reply(anu.desc)
+					break
+		                case 'persengay':
+					gatauda = body.slice(7)
+					anu = await fetchJson(`https://arugaz.herokuapp.com/api/howbucins`, {method: 'get'})
+					reply(anu.desc+anu.persen)
+					break
+                                case 'hilih': 
 					if (args.length < 1) return reply('𝗸𝗮𝘀𝗶𝗵 𝘁𝗲𝗸𝘀!!!')
 					anu = await fetchJson(`https://mhankbarbars.herokuapp.com/api/hilih?teks=${body.slice(7)}`, {method: 'get'})
 					reply(anu.result)
