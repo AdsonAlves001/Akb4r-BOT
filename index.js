@@ -213,6 +213,9 @@ client.on('group-participants-update', async (anu) => {
 				case 'donate':
 					client.sendMessage(from, donasi(), text)
 					break
+                                case 'nhentai':
+					client.sendMessage(from, nhentai(), text)
+					break
 					case 'Iri':
 					case 'iri?':
             case 'iri':
