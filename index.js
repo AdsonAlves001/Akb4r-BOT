@@ -272,7 +272,8 @@ client.on('group-participants-update', async (anu) => {
 					break
 				case 'stiker': 
 				case 'sticker':
-				case 's':
+				case 'sgif':
+                                case 's':
 					if ((isMedia && !mek.message.videoMessage || isQuotedImage) && args.length == 0) {
 						const encmedia = isQuotedImage ? JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo : mek
 						const media = await client.downloadAndSaveMediaMessage(encmedia)
