@@ -765,7 +765,31 @@ client.sendMessage(from, drre, text, {quoted: mek})
 					anu = await fetchJson(`https://arugaz.herokuapp.com/api/howbucins`, {method: 'get'})
 					reply(anu.desc)
 					break
-		                case 'persengay':
+		                case 'leave': 
+				    if (!isGroup) return reply(mess.only.group)
+					if (!isOwner) return reply(mess.only.ownerB)
+			    	anu = await client.groupLeave(from, '𝗕𝘆𝗲𝗲', groupId)
+	                break
+	            case 'getses':
+                    if (!isOwner) return client.reply(from, 'Perintah ini hanya untuk Owner bot', id)
+                    const sesPic = await client.getSnapshot()
+                    client.sendFile(from, sesPic, 'session.png', 'Neh...', id)
+                    break
+				case 'setname':
+                if (!isGroup) return reply(mess.only.group)
+			    if (!isGroupAdmins) return reply(mess.only.admin)
+				if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+                client.groupUpdateSubject(from, `${body.slice(9)}`)
+                client.sendMessage(from, 'Succes, Ganti Nama Grup', text, {quoted: mek})
+                break
+                case 'setdesc':
+                if (!isGroup) return reply(mess.only.group)
+			    if (!isGroupAdmins) return reply(mess.only.admin)
+				if (!isBotGroupAdmins) return reply(mess.only.Badmin)
+                client.groupUpdateDescription(from, `${body.slice(9)}`)
+                client.sendMessage(from, 'Succes, Ganti Deskripsi Grup', text, {quoted: mek})
+                break
+                                case 'persengay':
 					gatauda = body.slice(7)
 					anu = await fetchJson(`https://arugaz.herokuapp.com/api/howbucins`, {method: 'get'})
 					reply(anu.desc+anu.persen)
